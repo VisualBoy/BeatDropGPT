@@ -2566,6 +2566,8 @@ int CPlugin::AllocateMyDX9Stuff()
             LoadPreset(m_szPresetStartup, 0.0f);
         else
             LoadRandomPreset(0.0f);
+	if (m_bAutoLockPresetWhenNoMusic)
+		m_bPresetLockedByUser = false;
         m_bInitialPresetSelected = true;
     }
     else
