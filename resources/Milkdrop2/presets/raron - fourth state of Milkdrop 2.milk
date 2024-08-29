@@ -91,7 +91,7 @@ wave_0_per_frame6=t8 = q8;
 wave_0_per_point1=x = t1;
 wave_0_per_point2=y = t2;
 wave_0_per_point3=
-wave_0_per_point4=chance = rand(24);
+wave_0_per_point4=chance = int(rand(24));
 wave_0_per_point5=
 wave_0_per_point6=t1 = if(equal(chance,0),-.0955*y+0.7183,t1);
 wave_0_per_point7=t2 = if(equal(chance,0),0.3135*x+0.3384,t2);
@@ -181,7 +181,7 @@ wave_1_per_frame6=t8 = q8;
 wave_1_per_point1=x = t1;
 wave_1_per_point2=y = t2;
 wave_1_per_point3=
-wave_1_per_point4=chance = rand(24);
+wave_1_per_point4=chance = int(rand(24));
 wave_1_per_point5=
 wave_1_per_point6=t1 = if(equal(chance,0),-.0955*y+0.7183,t1);
 wave_1_per_point7=t2 = if(equal(chance,0),0.3135*x+0.3384,t2);
@@ -271,7 +271,7 @@ wave_2_per_frame6=t8 = q8;
 wave_2_per_point1=x = t1;
 wave_2_per_point2=y = t2;
 wave_2_per_point3=
-wave_2_per_point4=chance = rand(24);
+wave_2_per_point4=chance = int(rand(24));
 wave_2_per_point5=
 wave_2_per_point6=t1 = if(equal(chance,0),-.0955*y+0.7183,t1);
 wave_2_per_point7=t2 = if(equal(chance,0),0.3135*x+0.3384,t2);
@@ -361,7 +361,7 @@ wave_3_per_frame6=t8 = q8;
 wave_3_per_point1=x = t1;
 wave_3_per_point2=y = t2;
 wave_3_per_point3=
-wave_3_per_point4=chance = rand(24);
+wave_3_per_point4=chance = int(rand(24));
 wave_3_per_point5=
 wave_3_per_point6=t1 = if(equal(chance,0),-.0955*y+0.7183,t1);
 wave_3_per_point7=t2 = if(equal(chance,0),0.3135*x+0.3384,t2);

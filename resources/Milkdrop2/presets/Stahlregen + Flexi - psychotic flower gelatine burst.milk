@@ -230,7 +230,7 @@ shapecode_1_border_r=0.000
 shapecode_1_border_g=0.600
 shapecode_1_border_b=0.000
 shapecode_1_border_a=0.500
-shape_1_per_frame1=instance_counter = 6.28*instance/num_instance;
+shape_1_per_frame1=instance_counter = 6.28*instance/num_inst;
 shape_1_per_frame2=x = q1 + 0.1 * (1/q5) * bass_att * sin(instance_counter);
 shape_1_per_frame3=y = 1-q2 + 0.1 * (1/q4) * bass_att * cos(instance_counter);
 shapecode_2_enabled=1
@@ -257,7 +257,7 @@ shapecode_2_border_r=0.000
 shapecode_2_border_g=0.600
 shapecode_2_border_b=0.000
 shapecode_2_border_a=0.500
-shape_2_per_frame1=instance_counter = 6.28*instance/num_instance;
+shape_2_per_frame1=instance_counter = 6.28*instance/num_inst;
 shape_2_per_frame2=x = q1 + 0.1 * (1/q5) * mid_att * sin(instance_counter);
 shape_2_per_frame3=y = 1-q2 + 0.1 * (1/q4) * mid_att * cos(instance_counter);
 shapecode_3_enabled=0
@@ -284,7 +284,7 @@ shapecode_3_border_r=0.000
 shapecode_3_border_g=0.000
 shapecode_3_border_b=1.000
 shapecode_3_border_a=0.300
-shape_3_per_frame1=instance_counter = 6.28*instance/num_instance;
+shape_3_per_frame1=instance_counter = 6.28*instance/num_inst;
 shape_3_per_frame2=x = q1 + 0.1 * (1/q5) * treb_att * sin(instance_counter);
 shape_3_per_frame3=y = 1-q2 + 0.1 * (1/q4) * treb_att * cos(instance_counter);
 per_frame_1=vol = bass*8 + mid*5 + treb*3;

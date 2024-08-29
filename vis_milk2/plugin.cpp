@@ -2566,8 +2566,8 @@ int CPlugin::AllocateMyDX9Stuff()
             LoadPreset(m_szPresetStartup, 0.0f);
         else
             LoadRandomPreset(0.0f);
-	if (m_bAutoLockPresetWhenNoMusic)
-		m_bPresetLockedByUser = false;
+        if (m_bAutoLockPresetWhenNoMusic)
+            m_bPresetLockedByUser = false;
         m_bInitialPresetSelected = true;
     }
     else
@@ -5561,11 +5561,13 @@ void ToggleTransparency(HWND hwnd)
         //SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 255, ULW_COLORKEY | LWA_ALPHA);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 255, LWA_COLORKEY);
         OpacityControl = 10; //Reverts the window opacity back to 100%
+        DragAcceptFiles(hwnd, TRUE);
     }
     else
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 255, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
 }
 
@@ -5584,52 +5586,62 @@ void ToggleWindowOpacity(HWND hwnd)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 255, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 9)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 230, LWA_ALPHA);
         TranspaMode = false; //Automatically turns off the transparency mode when you are toggling the window opacity!
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 8)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 205, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 7)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 179, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 6)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 154, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 5)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 128, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 4)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 102, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 3)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 77, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 2)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 51, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl == 1)
     {
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED);
         SetLayeredWindowAttributes(hwnd, RGB(0, 0, 0), 26, LWA_ALPHA);
+        DragAcceptFiles(hwnd, TRUE);
     }
     else if (OpacityControl <= 0)
         OpacityControl = 1;
