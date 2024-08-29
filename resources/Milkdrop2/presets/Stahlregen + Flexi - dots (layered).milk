@@ -153,9 +153,9 @@ shape_0_per_frame2=a = trans;
 shape_0_per_frame3=a2 = trans;
 shape_0_per_frame4=border_a = trans;
 shape_0_per_frame5=
-shape_0_per_frame6=x = q1 + rand(15)*0.01*bass_att*if(equal(rand(2),1),1,-1);
-shape_0_per_frame7=y = q2 + rand(15)*0.01*bass_att*if(equal(rand(2),1),1,-1);
-shape_0_per_frame8=rad = .09 + .002*rand(10);
+shape_0_per_frame6=x = q1 + int(rand(15))*0.01*bass_att*if(equal(int(rand(2)),1),1,-1);
+shape_0_per_frame7=y = q2 + int(rand(15))*0.01*bass_att*if(equal(int(rand(2)),1),1,-1);
+shape_0_per_frame8=rad = .09 + .002*int(rand(10));
 shapecode_1_enabled=1
 shapecode_1_sides=32
 shapecode_1_additive=0
@@ -185,9 +185,9 @@ shape_1_per_frame2=a = trans;
 shape_1_per_frame3=a2 = trans;
 shape_1_per_frame4=border_a = trans;
 shape_1_per_frame5=
-shape_1_per_frame6=x = q1 + rand(15)*0.01*mid_att*if(equal(rand(2),1),1,-1);
-shape_1_per_frame7=y = q2 + rand(15)*0.01*mid_att*if(equal(rand(2),1),1,-1);
-shape_1_per_frame8=rad = .09 + .002*rand(10);
+shape_1_per_frame6=x = q1 + int(rand(15))*0.01*mid_att*if(equal(int(rand(2)),1),1,-1);
+shape_1_per_frame7=y = q2 + int(rand(15))*0.01*mid_att*if(equal(int(rand(2)),1),1,-1);
+shape_1_per_frame8=rad = .09 + .002*int(rand(10));
 shapecode_2_enabled=1
 shapecode_2_sides=32
 shapecode_2_additive=0
@@ -217,9 +217,9 @@ shape_2_per_frame2=a = trans;
 shape_2_per_frame3=a2 = trans;
 shape_2_per_frame4=border_a = trans;
 shape_2_per_frame5=
-shape_2_per_frame6=x = q1 + rand(15)*0.01*treb_att*if(equal(rand(2),1),1,-1);
-shape_2_per_frame7=y = q2 + rand(15)*0.01*treb_att*if(equal(rand(2),1),1,-1);
-shape_2_per_frame8=rad = .09 + .002*rand(10);
+shape_2_per_frame6=x = q1 + int(rand(15))*0.01*treb_att*if(equal(int(rand(2)),1),1,-1);
+shape_2_per_frame7=y = q2 + int(rand(15))*0.01*treb_att*if(equal(int(rand(2)),1),1,-1);
+shape_2_per_frame8=rad = .09 + .002*int(rand(10));
 shapecode_3_enabled=0
 shapecode_3_sides=4
 shapecode_3_additive=0
