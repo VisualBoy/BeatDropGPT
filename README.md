@@ -37,7 +37,7 @@ Features to be added:
 * New blending transitions
 
 Before compiling the code:
-* Anyone who uses Visual Studio 2019, please change from debug to release and build it.
+* Anyone who uses Visual Studio 2019 or higher, please change from debug to release and build it.
 
 # BEFORE YOU RUN BEATDROP
 
