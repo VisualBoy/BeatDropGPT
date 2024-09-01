@@ -327,18 +327,18 @@ per_frame_9=beatrate = max(if(beat,if(below(time-lastbeat,2*beatrate),0.1*(beatr
 per_frame_10=peakbass_att = beat*bass_att + (1-beat)*peakbass_att*(above(time - lastbeat, 2*beatrate)*0.95 + (1-above(time - lastbeat, 2*beatrate))*0.995);
 per_frame_11=lastbeat = beat*time + (1-beat)*lastbeat;
 per_frame_12=peakbass_att = max(peakbass_att,1.1*meanbass_att);
-per_frame_13=beatcount = beatcount + beat*if(above(beatcount,rand(3)+2),1-beatcount,1);
+per_frame_13=beatcount = beatcount + beat*if(above(beatcount,int(rand(3))+2),1-beatcount,1);
 per_frame_14=
-per_frame_15=red=if(equal(beatcount,beat),rand(2),red);
-per_frame_16=green=if(equal(beatcount,beat),rand(2),green);
-per_frame_17=blue=if(equal(beatcount,beat),rand(2),blue);
+per_frame_15=red=if(equal(beatcount,beat),int(rand(2)),red);
+per_frame_16=green=if(equal(beatcount,beat),int(rand(2)),green);
+per_frame_17=blue=if(equal(beatcount,beat),int(rand(2)),blue);
 per_frame_18=white = below(red+blue+green,3);
 per_frame_19=red = red*white;
 per_frame_20=blue = blue*white;
 per_frame_21=green = green*white;
 per_frame_22=
 per_frame_23=change=equal(beatcount,beat);
-per_frame_24=orient=if(change,rand(4),orient);
+per_frame_24=orient=if(change,int(rand(4)),orient);
 per_frame_25=echo_orient = orient;
 per_frame_26=
 per_frame_27=ib_a=if(change,1,0.005);
@@ -350,9 +350,9 @@ per_frame_32=ob_r = red;
 per_frame_33=ob_g = green;
 per_frame_34=ob_b = blue;
 per_frame_35=
-per_frame_36=xshift = if(change,if(equal(abs(orient-1),1),(rand(50)-25)*0.0001,0),xshift);
-per_frame_37=yshift = if(change,if(below(orient,2),(rand(50)-25)*0.0001,0),yshift);
-per_frame_38=rotate = if(change,if(equal(abs(orient-1.5),1.5),(rand(50)-25)*0.0002,0),rotate);
+per_frame_36=xshift = if(change,if(equal(abs(orient-1),1),(int(rand(50))-25)*0.0001,0),xshift);
+per_frame_37=yshift = if(change,if(below(orient,2),(int(rand(50))-25)*0.0001,0),yshift);
+per_frame_38=rotate = if(change,if(equal(abs(orient-1.5),1.5),(int(rand(50))-25)*0.0002,0),rotate);
 per_frame_39=dx = xshift;
 per_frame_40=dy = yshift;
 per_frame_41=rot = rotate;

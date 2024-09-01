@@ -187,9 +187,9 @@ wave_2_per_point1=n= sample*6.283;
 wave_2_per_point2=cubesize=q2;
 wave_2_per_point3=fix=1/cubesize *0.5;
 wave_2_per_point4=
-wave_2_per_point5=xp= rand(cubesize)/cubesize-0.5+fix;
-wave_2_per_point6=yp= rand(cubesize)/cubesize-0.5+fix;
-wave_2_per_point7=zp= rand(cubesize)/cubesize-0.5+fix;
+wave_2_per_point5=xp= int(rand(cubesize))/cubesize-0.5+fix;
+wave_2_per_point6=yp= int(rand(cubesize))/cubesize-0.5+fix;
+wave_2_per_point7=zp= int(rand(cubesize))/cubesize-0.5+fix;
 wave_2_per_point8=
 wave_2_per_point9=
 wave_2_per_point10=//rotate
