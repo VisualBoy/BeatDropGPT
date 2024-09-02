@@ -85,4 +85,4 @@ per_frame_21=wave_b = ib_g;
 per_frame_22=ob_r = 1-ib_g;
 per_frame_23=ob_b = 0.5*(ib_r+ib_g);
 per_pixel_1=sx =0.5+ 5*q2*(pow(1,2));
-per_pixel_2=xsy = 0.5+0.5*rad*q2;
+per_pixel_2=sy = 0.5+0.5*rad*q2;
