@@ -76,9 +76,9 @@ per_frame_12=normal=5;
 per_frame_13=more=bass_effect;
 per_frame_14=less=7;
 per_frame_15=react=less;
-per_frame_16=new_bass=if(above(Bass,bass_effect),bass&bass_att,bass_effect+bass_thresh);
-per_frame_17=new_treb=if(above(treb,treb_effect),treb&treb_att,treb_Effect+treb_thresh);
-per_frame_18=new_mid=if(above(mid,mid_effect),mid&mid_Att,mid_effect+mid_thresh);
+per_frame_16=new_bass=if(above(Bass,bass_effect),bass-2&bass_att,bass_effect+bass_thresh);
+per_frame_17=new_treb=if(above(treb,treb_effect),treb-2&treb_att,treb_Effect+treb_thresh);
+per_frame_18=new_mid=if(above(mid,mid_effect),mid-2&mid_Att,mid_effect+mid_thresh);
 per_frame_19=new_vol=new_bass+new_treb+new_mid+.04;
 per_frame_20=change=bnot(1);
 per_frame_21=q1=new_bass;
@@ -107,7 +107,7 @@ per_pixel_1=rot=if(above(q1,bass),if(above(no_effect,0),rot*Sin(-ang+ang-.4*q1)-
 per_pixel_2=*sin(q6-x+y*rad)-rot*sin(above(q1,q2)),.1*rad*ang*x*y),0*rad*Ang+.1*sin(q5)*ang-.3*rad*Sin(q5));
 per_pixel_3=zoom=if(above(no_effect,2),zoom+raD*.03*sin(q2+q5)-x*.05*sin(q4+q6)+y*.10*.25*sin(q5-q3)
 per_pixel_4=,1+.10*sin(ang+Rad-x*ang+rad*sin(q4))
-per_pixel_5=)&y+.5-rad+x+y*sin(equal(q2,q2)&rad*sin(q6));;
+per_pixel_5=)&y+.5-rad+x+y*sin(equal(q2,q2)&rad*sin(q6))+0.5;;
 per_pixel_6=no_effect=q4*sin(above(q4,1));
 per_pixel_7=
 per_pixel_8=sx=sx+.07*sin(above(Q1,q3))*rad*.25;

@@ -262,8 +262,8 @@ per_frame_23=monitor = tvol%fps;
 per_frame_24=
 per_frame_25=q5 = cos(tvol);
 per_frame_26=q6 = sin(tvol);
-per_pixel_1=dx = dx*pow(-1,0&(13+q1 - 5*(q2*y)))*min(bass,1.2);
-per_pixel_2=dy = dy*pow(-1,0&(13+q1 - 5*(q3*x)))*min(bass,1.2);
+per_pixel_1=dx = dx*pow(-1,-1&(13+q1 - 5*(q2*y))+.5)*min(bass,1.2);
+per_pixel_2=dy = dy*pow(-1,-1&(13+q1 - 5*(q3*x))+.5)*min(bass,1.2);
 warp_1=`sampler sampler_rand00;
 warp_2=`sampler sampler_rand01;
 warp_3=`shader_body

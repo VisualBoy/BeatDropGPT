@@ -404,8 +404,8 @@ per_pixel_8=vx=sin((x+q7)*3.14-q2);
 per_pixel_9=vy=sin((y+q8)*3.14-q5);
 per_pixel_10=dx=dxe/2/2/2;
 per_pixel_11=dy=dye/2/2/2;
-per_pixel_12=cx = (0&(x+q1))-q1;
-per_pixel_13=cy = (0&(y+q2))-q2;
+per_pixel_12=cx = (-1&(x+q1+0.5))-q1;
+per_pixel_13=cy = (-1&(y+q2+0.5))-q2;
 per_pixel_14=
 per_pixel_15=zoom=zoom+.1*sin(above(vx*50,vy*50-5*3.14*sin(above(Q1,q2))))*sin(above(q2,q3))-ang/2/2/2/2/2*
 per_pixel_16=sin(above(q5,q3)*sin(q1))/2/2/2/2;
