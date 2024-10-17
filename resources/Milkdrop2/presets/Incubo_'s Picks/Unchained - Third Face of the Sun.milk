@@ -113,7 +113,7 @@ per_frame_49=wave_x=wave_x+.25*sin(time*.811+q1)+.1*(frame%3)*sign(q3);
 per_frame_50=wave_y=wave_y+.25*sin(time*.788+q2)+.1*(frame%2)*sign(q3);
 per_frame_51=wave_mode=q7;
 per_frame_52=zoom=zoom+.02*q1+.02*q2+.01*q3;
-per_pixel_1=grid=pow(sin(rad*6*sin(q8)+x*y*16*q1)*2,1+q8%5);
+per_pixel_1=grid=pow(sin(rad*6*sin(q8)+(x*y)*16*q1)*2,1+q8%5);
 per_pixel_2=snee=.05*sin(q8)*q7;
 per_pixel_3=snee=above(x,.5+snee)*if(below(q7,3),above(y,.5-snee),below(y,.5+snee))*below(rad,.8+.2*q3);
 per_pixel_4=snur=if(bnot(q7),rad*snee,if(bnot(q8%q7),x,y*bnot(snee)));
@@ -123,5 +123,5 @@ per_pixel_7=sy=sy-bnot(rot)*.003*sign(sin(q7))*(1+q7*equal(q8%2,0)*sin(y*3.14*q4
 per_pixel_8=zoom=if(bnot(q8%4),zoom+.06*sin(snur*6.28*q1),1);
 per_pixel_9=rot=if(below(x,.5+.08*q7)*above(y,.5-.08*q7)*below(rad,1-.2*q7),if(bnot(q8%3),q4*sign(q5),
 per_pixel_10=.03*sin(rad*10*q4)*below(snur,.5)),rot);
-per_pixel_11=cx=if(bnot(snee),.5+.5*sin(x*10*q2),cx);
-per_pixel_12=cy=if(bnot(snee)*above(q3,0),.5+.5*sin(y*10*q1),cy);
+per_pixel_11=cx=if(bnot(snee),.5+.5*sin((x*10)*q2),cx);
+per_pixel_12=cy=if(bnot(snee)*above(q3,0),.5+.5*sin((y*10)*q1),cy);

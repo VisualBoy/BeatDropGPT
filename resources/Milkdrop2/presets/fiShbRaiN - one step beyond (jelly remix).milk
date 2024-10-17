@@ -74,7 +74,7 @@ wavecode_0_r=1.000000
 wavecode_0_g=1.000000
 wavecode_0_b=1.000000
 wavecode_0_a=0.100000
-wave_0_per_point1=ma=rand(100);
+wave_0_per_point1=ma=int(rand(100));
 wave_0_per_point2=
 wave_0_per_point3=mx=mx+(.002*cos(ma));
 wave_0_per_point4=my=my+(.02*sin(ma));
@@ -102,7 +102,7 @@ wavecode_1_r=1.000000
 wavecode_1_g=1.000000
 wavecode_1_b=1.000000
 wavecode_1_a=1.000000
-wave_1_per_point1=ma=rand(100);
+wave_1_per_point1=ma=int(rand(100));
 wave_1_per_point2=
 wave_1_per_point3=mx=mx+(.004*cos(ma));
 wave_1_per_point4=my=my+(.004*sin(ma));
@@ -129,7 +129,7 @@ wavecode_2_r=1.000000
 wavecode_2_g=1.000000
 wavecode_2_b=1.000000
 wavecode_2_a=1.000000
-wave_2_per_point1=ma=rand(100);
+wave_2_per_point1=ma=int(rand(100));
 wave_2_per_point2=
 wave_2_per_point3=mx=mx+(.002*cos(ma));
 wave_2_per_point4=my=my+(.02*sin(ma));
@@ -154,7 +154,7 @@ wavecode_3_r=1.000000
 wavecode_3_g=1.000000
 wavecode_3_b=1.000000
 wavecode_3_a=0.400000
-wave_3_per_point1=ma=rand(100);
+wave_3_per_point1=ma=int(rand(100));
 wave_3_per_point2=
 wave_3_per_point3=mx=mx+(.02*cos(ma));
 wave_3_per_point4=my=my+(.02*sin(ma));

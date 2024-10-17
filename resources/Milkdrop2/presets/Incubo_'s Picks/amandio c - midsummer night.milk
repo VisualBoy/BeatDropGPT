@@ -286,7 +286,7 @@ shapecode_2_border_r=0.000
 shapecode_2_border_g=1.000
 shapecode_2_border_b=0.000
 shapecode_2_border_a=0.000
-shape_2_per_frame1=sample=1-instance/num_instance;
+shape_2_per_frame1=sample=1-instance/num_inst;
 shape_2_per_frame2=
 shape_2_per_frame3=///// bird with shapes
 shape_2_per_frame4=
@@ -391,7 +391,7 @@ shapecode_3_border_r=0.000
 shapecode_3_border_g=1.000
 shapecode_3_border_b=0.000
 shapecode_3_border_a=0.000
-shape_3_per_frame1=sample=instance/num_instance;
+shape_3_per_frame1=sample=instance/num_inst;
 shape_3_per_frame2=
 shape_3_per_frame3=y=.7*sample;
 shape_3_per_frame4=x=0;

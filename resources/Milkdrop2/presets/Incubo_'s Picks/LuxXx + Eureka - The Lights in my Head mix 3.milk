@@ -707,8 +707,8 @@ per_frame_52=
 per_frame_53=monitor=q4
 per_frame_54=
 per_frame_55=
-per_pixel_1=cx = ((0&(x*q3-q5))+q5)*q4;
-per_pixel_2=cy = ((0&(y*q3-q6))+q6)*q4;
+per_pixel_1=cx = ((-1&(x*q3-q5+.5))+q5)*q4;
+per_pixel_2=cy = ((-1&(y*q3-q6+.5))+q6)*q4;
 per_pixel_3=newx = q1-x;
 per_pixel_4=newy = q2-y;
 per_pixel_5=newrad = sqrt((newx)*(newx)+0.5625*(newy)*(newy))*2;

@@ -289,11 +289,11 @@ per_pixel_3=yv = cos(time*.233)*y +sin(time*.567)*y;
 per_pixel_4=x = xv; y = yv;
 per_pixel_5=//end x/y transform code
 per_pixel_6=
-per_pixel_7=sx=sx+.075*sin(x*3+q7*x);
-per_pixel_8=sy=sy+.075*sin(y*3.1+q7*y);
+per_pixel_7=sx=sx+.075*sin((x*3)+(q7*x));
+per_pixel_8=sy=sy+.075*sin((y*3.1)+(q7*y));
 per_pixel_9=
-per_pixel_10=dx=dx+.005*cos(y*20+.1*cos(time*.11)+(q2*q6));
-per_pixel_11=dy=dy+.005*sin(x*20+.1*sin(time*.09)+(q3*q6));
+per_pixel_10=dx=dx+.005*cos((y*20)+.1*cos(time*.11)+(q2*q6));
+per_pixel_11=dy=dy+.005*sin((x*20)+.1*sin(time*.09)+(q3*q6));
 warp_1=`shader_body
 warp_2=`{
 warp_3=`    // sample previous frame

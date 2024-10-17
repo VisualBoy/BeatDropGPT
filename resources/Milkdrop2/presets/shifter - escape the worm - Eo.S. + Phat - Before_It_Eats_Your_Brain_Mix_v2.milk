@@ -99,9 +99,9 @@ wavecode_1_b=3.000000
 wavecode_1_a=1.000000
 wave_1_per_frame1=t1=sin(time*0.236)*0.5 + 0.5
 wave_1_per_point1=it = (it+1)*below(it,5);
-wave_1_per_point2=sw = if(equal(it,0),rand(2),sw);
-wave_1_per_point3=rx = if(sw,rand(1001)*.001,rand(2));
-wave_1_per_point4=ry = if(sw,rand(2),rand(1001)*.001);
+wave_1_per_point2=sw = if(equal(it,0),int(rand(2)),sw);
+wave_1_per_point3=rx = if(sw,int(rand(1001))*.001,int(rand(2)));
+wave_1_per_point4=ry = if(sw,int(rand(2)),int(rand(1001))*.001);
 wave_1_per_point5=
 wave_1_per_point6=tm = time*.5 + sample*2;
 wave_1_per_point7=
@@ -148,9 +148,9 @@ wavecode_2_b=3.000000
 wavecode_2_a=1.000000
 wave_2_per_frame1=t1=sin(time*0.236)*0.5 + 0.5
 wave_2_per_point1=it = (it+1)*below(it,25);
-wave_2_per_point2=sw = if(equal(it,0),rand(2),sw);
-wave_2_per_point3=rx = if(sw,rand(1001)*.001,rand(2));
-wave_2_per_point4=ry = if(sw,rand(2),rand(1001)*.001);
+wave_2_per_point2=sw = if(equal(it,0),int(rand(2)),sw);
+wave_2_per_point3=rx = if(sw,int(rand(1001))*.001,int(rand(2)));
+wave_2_per_point4=ry = if(sw,int(rand(2)),int(rand(1001))*.001);
 wave_2_per_point5=
 wave_2_per_point6=tm = time*.5 + sample*2;
 wave_2_per_point7=
@@ -193,7 +193,7 @@ wavecode_3_a=1.000000
 wave_3_per_frame1=tic = min(time-tir,.1);
 wave_3_per_frame2=tir = time;
 wave_3_per_frame3=t2 = tic;
-wave_3_per_point1=sam = rand(1001)*.001;
+wave_3_per_point1=sam = int(rand(1001))*.001;
 wave_3_per_point2=sam = sample;
 wave_3_per_point3=it = (it+1)*above(sam,0);
 wave_3_per_point4=set = int(sam*6);

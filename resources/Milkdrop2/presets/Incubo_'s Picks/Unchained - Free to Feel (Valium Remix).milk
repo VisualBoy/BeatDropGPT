@@ -98,6 +98,6 @@ per_frame_37=wave_b=treb_flop*mv_r;
 per_frame_38=ob_r=wave_r;
 per_frame_39=ob_g=wave_g;
 per_frame_40=ob_b=wave_b;
-per_pixel_1=grid=x*100%(above(q1,q4)+above(q2,q5)+above(q3,q4)) + y*100%(above(q1,q5)+above(q2,q4)+above(q3,q5))*rand(10);
+per_pixel_1=grid=(x*10)%(above(q1,q4)+above(q2,q5)+above(q3,q4)) + (y*10)%(above(q1,q5)+above(q2,q4)+above(q3,q5))*int(rand(10));
 per_pixel_2=rot=if(grid,.12*cos(rad*3.14+x*q1*3.14+y*q2*3.14)*(q5+q4),0);
 per_pixel_3=zoom=zoom-bnot(grid)*sin(x*q3*3.14+y*q5*3.14)*.1;

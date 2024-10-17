@@ -78,4 +78,4 @@ per_frame_17=q1=timer;
 per_pixel_1=disk_shift = if(equal(abs(sin(ang)), if(above(q1,0),0,1)), -rot, 0.05);
 per_pixel_2=timer=sin(time*1.3);
 per_pixel_3=x_or_y=if(above(q1,0),y,x);
-per_pixel_4=rot = rot + if(equal(x_or_y*10%2,0),if(below(timer,0),disk_shift,-rot),if(above(timer,0),disk_shift,-rot));
+per_pixel_4=rot = rot + if(equal((x_or_y*10)%2,0),if(below(timer,0),disk_shift,-rot),if(above(timer,0),disk_shift,-rot));

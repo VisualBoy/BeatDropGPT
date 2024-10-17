@@ -58,4 +58,4 @@ per_frame_1=wave_r = wave_r + 0.350*( 0.60*sin(0.980*time) + 0.40*sin(1.047*time
 per_frame_2=wave_g = wave_g + 0.350*( 0.60*sin(0.835*time) + 0.40*sin(1.081*time) ); 
 per_frame_3=wave_b = wave_b + 0.350*( 0.60*sin(0.814*time) + 0.40*sin(1.011*time) ); 
 per_frame_4=dx = 0.020*sin(0.823*time); 
-per_pixel_1=rot=if(equal(x*10%2,0),rot+.03,rot-.03);
+per_pixel_1=rot=if(equal((x*10)%2,0),rot+.03,rot-.03);

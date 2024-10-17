@@ -86,6 +86,6 @@ per_pixel_1=bend = cos(abs(x*10-5)*q2*bnot(q1%11)+(rad*10*q2-10*q3)*bnot(q1%7)+a
 per_pixel_2=zoom = zoom+bend*.05*bnot(q1%22);
 per_pixel_3=dx=if(bnot(q1%5),dx,0);
 per_pixel_4=dy=if(bnot(q1%3),dx,0);
-per_pixel_5=grid=x*100%q5 + y*100%q5;
+per_pixel_5=grid=(x*10)%q5 + (y*10)%q5;
 per_pixel_6=sx=sx-if(bnot(q1%10),if(bnot(grid),q3/2,.03),.1*q2*bnot(q1%77));
 per_pixel_7=sy=sy-if(bnot(q1%21),if(bnot(grid),q2/2,.03),.1*q3*bnot(q1%26));

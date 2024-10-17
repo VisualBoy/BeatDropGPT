@@ -151,7 +151,7 @@ shapecode_0_border_a=0.100000
 shape_0_per_frame1=a = q1;
 shape_0_per_frame2=a2 = a;
 shape_0_per_frame3=
-shape_0_per_frame4=ra = rand(1001)*.001;
+shape_0_per_frame4=ra = int(rand(1001))*.001;
 shape_0_per_frame5=ti = q4;
 shape_0_per_frame6=ra = ti - int(ti);
 shape_0_per_frame7=
@@ -206,7 +206,7 @@ shape_1_per_frame3=
 shape_1_per_frame4=a = q1;
 shape_1_per_frame5=a2 = a;
 shape_1_per_frame6=
-shape_1_per_frame7=ra = rand(1001)*.001;
+shape_1_per_frame7=ra = int(rand(1001))*.001;
 shape_1_per_frame8=ti = q4 + .25;
 shape_1_per_frame9=ra = ti - int(ti);
 shape_1_per_frame10=
@@ -261,7 +261,7 @@ shape_2_per_frame3=
 shape_2_per_frame4=a = q1;
 shape_2_per_frame5=a2 = a;
 shape_2_per_frame6=
-shape_2_per_frame7=ra = rand(1001)*.001;
+shape_2_per_frame7=ra = int(rand(1001))*.001;
 shape_2_per_frame8=ti = q4 + .5;
 shape_2_per_frame9=ra = ti - int(ti);
 shape_2_per_frame10=
@@ -316,7 +316,7 @@ shape_3_per_frame3=
 shape_3_per_frame4=a = q1;
 shape_3_per_frame5=a2 = a;
 shape_3_per_frame6=
-shape_3_per_frame7=ra = rand(1001)*.001;
+shape_3_per_frame7=ra = int(rand(1001))*.001;
 shape_3_per_frame8=ti = q4 + .75;
 shape_3_per_frame9=ra = ti - int(ti);
 shape_3_per_frame10=

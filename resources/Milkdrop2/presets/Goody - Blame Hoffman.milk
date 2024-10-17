@@ -220,8 +220,8 @@ shapecode_3_border_r=1.000
 shapecode_3_border_g=1.000
 shapecode_3_border_b=1.000
 shapecode_3_border_a=0.100
-per_pixel_1=dx=dx+.02*sin(timem+y*10+treb_att);
-per_pixel_2=dy=dy+.02*cos(time+x*10+bass_att);
+per_pixel_1=dx=dx+.02*sin(time+(y*10)+treb_att);
+per_pixel_2=dy=dy+.02*cos(time+(x*10)+bass_att);
 warp_1=`sampler sampler_web;
 warp_2=`
 warp_3=`shader_body

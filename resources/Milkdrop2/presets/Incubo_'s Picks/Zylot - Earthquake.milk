@@ -1,7 +1,7 @@
 MILKDROP_PRESET_VERSION=201
-PSVERSION=3
-PSVERSION_WARP=3
-PSVERSION_COMP=3
+PSVERSION=4
+PSVERSION_WARP=4
+PSVERSION_COMP=4
 [preset00]
 fRating=3.000
 fGammaAdj=1.000
@@ -164,7 +164,7 @@ shapecode_0_border_r=1.000
 shapecode_0_border_g=1.000
 shapecode_0_border_b=1.000
 shapecode_0_border_a=0.000
-shape_0_init1=sidesin = 3 + 0&rand(8);
+shape_0_init1=sidesin = 3 + 0|rand(8);
 shape_0_init2=t = rand(40)*.1;
 shape_0_init3=inneralpha = rand(100)*.01;
 shape_0_init4=outeralpha = rand(100)*.01;

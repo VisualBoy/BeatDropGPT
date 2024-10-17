@@ -59,7 +59,7 @@ per_frame_2=wave_g = wave_g + 0.400*( 0.60*sin(3.900*time) + 0.40*sin(0.956*time
 per_frame_3=wave_b = wave_b + 0.400*( 0.60*sin(1.910*time) + 0.40*sin(0.920*time) ); 
 per_frame_4=zoom = zoom + 0.013*( 0.60*sin(0.339*time) + 0.40*sin(0.276*time) ); 
 per_frame_5=rot = rot + 0.040*( 0.60*sin(0.381*time) + 0.40*sin(0.579*time) ); 
-per_pixel_1=quark = if(above(rad*10%2,0),.8,-.8); 
+per_pixel_1=quark = if(above((rad*10)%2,0),.8,-.8); 
 per_pixel_2=zoom = if(above(bass_att,1),zoom + (x*2-1)*(0.08+0.15*sin(time*0.321)) + (y*2-1)*(0.08+0.25*cos(time*0.321)),1); 
 per_pixel_3=rot = if(below(bass,1),rot-sin(time*0.88)*.3*rad,quark); 
 per_pixel_4=sx=if(above(treb,.7),sx+(zoom-1)*0.8,sx); 

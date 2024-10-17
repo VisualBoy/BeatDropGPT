@@ -213,5 +213,5 @@ shapecode_3_border_b=1.000000
 shapecode_3_border_a=0.100000
 per_frame_1=wave_r=rand(100)*.01;
 per_frame_2=wave_g=bass*.5;
-per_pixel_1=rot=rot+((rand(10)-5)*.001);
+per_pixel_1=rot=rot+((int(rand(10))-5)*.001);
 per_pixel_2=rot=rot+(rad*.01);

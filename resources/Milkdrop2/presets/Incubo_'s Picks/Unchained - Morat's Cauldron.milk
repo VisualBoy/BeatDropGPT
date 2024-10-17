@@ -64,6 +64,6 @@ per_frame_7=rot=if(above((mid+3*bass_att+treb)*.21,1.4),flip*.1,0);
 per_frame_8=zoom=if(above((3*mid_att+bass+treb)*.21,1.4),zoom+flip*.03,zoom);
 per_frame_9=q1=flip;
 per_frame_10=q2=abs(wave_mystery);
-per_pixel_1=curvage=equal(rot,0)*cos(x*10*sin(time*.8)-x*10*sin(time*.5)+y*10*sin(time*.65)-rad*10*sin(time*.35))*.023;
+per_pixel_1=curvage=equal(rot,0)*cos((x*10)*sin(time*.8)-(x*10)*sin(time*.5)+(y*10)*sin(time*.65)-(rad*10)*sin(time*.35))*.023;
 per_pixel_2=rot=if(equal(zoom,1),rot,if(above(sin(abs(ang)),0.628),0,rot));
-per_pixel_3=zoom=if(equal(q2,.5),if(equal(x*10%2+y*10%2,0),zoom+.05*q1,zoom),zoom+curvage);
+per_pixel_3=zoom=if(equal(q2,.5),if(equal((x*10)%2+(y*10)%2,0),zoom+.05*q1,zoom),zoom+curvage);

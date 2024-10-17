@@ -282,7 +282,7 @@ per_frame_2=wave_r = 1;
 per_frame_3=wave_g = 1;
 per_frame_4=wave_b = 0;
 per_frame_5=decay = decay - 0.01*equal(frame%6,0);
-per_frame_6=dx=dx*.6+max(midd_att-1,bass_att-1)*.04;
+per_frame_6=dx=dx*.6+max(mid_att-1,bass_att-1)*.04;
 per_pixel_1=zoom=zoom+sin(sqr(rad))*2;
 per_pixel_2=
 warp_1=`sampler sampler_worms;

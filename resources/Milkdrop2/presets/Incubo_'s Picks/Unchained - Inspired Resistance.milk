@@ -115,6 +115,6 @@ per_pixel_5=dy=if(checky,shift*q5,dy);
 per_pixel_6=rot=if(checkx*checky,0,shift);
 per_pixel_7=bend = cos(   x*3.14*q2*above(q1,q2) + (rad*3.14*q2-3.14*q3)*above(q2,q3)+(y*3.14*q4)*above(q3,q1));
 per_pixel_8=zoom = zoom+bend*.05*above(q4+q5,.8);
-per_pixel_9=grid=x*100%(above(q1,q4)+above(q2,q5)+above(q3,q4)) + y*100%(above(q1,q5)+above(q2,q4)+above(q3,q5));
+per_pixel_9=grid=(x*10)%(above(q1,q4)+above(q2,q5)+above(q3,q4)) + (y*10)%(above(q1,q5)+above(q2,q4)+above(q3,q5));
 per_pixel_10=sx=sx-if(bnot(grid),q3*y,.03);
 per_pixel_11=sy=sy-if(bnot(grid),q2*x,.03);

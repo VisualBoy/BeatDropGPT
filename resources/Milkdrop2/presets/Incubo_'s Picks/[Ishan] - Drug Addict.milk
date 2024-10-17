@@ -223,6 +223,6 @@ per_frame_2=wave_r =wave_r + 0.650*( 0.60*sin(1.437*time) + 0.40*sin(0.970*time)
 per_frame_3=wave_g =wave_g + 0.650*( 0.60*sin(1.344*time) + 0.40*sin(0.841*time) );
 per_frame_4=wave_b =wave_b + 0.650*( 0.60*sin(1.251*time) + 0.40*sin(1.055*time) );
 per_frame_5=decay = decay - 0.01*equal(frame%6,0);
-per_frame_6=dx=dx*.6+max(midd_att-1,bass_att-1)*.04;
+per_frame_6=dx=dx*.6+max(mid_att-1,bass_att-1)*.04;
 per_pixel_1=zoom=zoom+sin(sqr(rad))*2;
 per_pixel_2=

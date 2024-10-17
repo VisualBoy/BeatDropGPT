@@ -86,8 +86,8 @@ wavecode_0_g=1.000
 wavecode_0_b=1.000
 wavecode_0_a=1.000
 wave_0_init1=t1 = 1
-wave_0_per_point1=x=rand(10000)*(.0001);
-wave_0_per_point2=y=rand(10000)*(.0001);
+wave_0_per_point1=x=int(rand(10000))*(.0001);
+wave_0_per_point2=y=int(rand(10000))*(.0001);
 wave_0_per_point3=
 wave_0_per_point4=vol=(bass+mid+treb)/3;
 wave_0_per_point5=a=vol;
