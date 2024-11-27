@@ -1,0 +1,24 @@
+
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Program Files (x86)\\Microsoft DirectX SDK (June 2010)\\Include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "C:\\Program Files (x86)\\Microsoft DirectX SDK (June 2010)\\Lib\\x86"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
+

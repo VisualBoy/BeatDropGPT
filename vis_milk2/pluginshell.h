@@ -102,6 +102,7 @@ public:
     LPD3DXFONT   GetFont(eFontIndex idx);       // returns a D3DX font handle for drawing text; see shell_defines.h for the definition of the 'eFontIndex' enum.
     int          GetFontHeight(eFontIndex idx); // returns the height of the font, in pixels; see shell_defines.h for the definition of the 'eFontIndex' enum.
     CTextManager m_text;
+
 protected:
 
     // MISC
@@ -149,8 +150,26 @@ protected:
     virtual void  CleanUpMyDX9Stuff(int final_cleanup) = 0;
     virtual void MyRenderFn(int redraw)  = 0;
     virtual void MyRenderUI(int *upper_left_corner_y, int *upper_right_corner_y, int *lower_left_corner_y, int *lower_right_corner_y, int xL, int xR) = 0;
-    virtual LRESULT MyWindowProc(HWND hWnd, unsigned uMsg, WPARAM wParam, LPARAM lParam) = 0;
-    virtual void OnAltK() { }; // doesn't *have* to be implemented
+    virtual LRESULT MyWindowProc(HWND hWnd, unsigned uMsg, WPARAM wParam, LPARAM lParam) {
+        static bool showChatInterface = false;
+        static std::wstring userInput;
+
+        if (uMsg == WM_KEYDOWN) {
+            if (wParam == VK_TAB) {
+                showChatInterface = !showChatInterface;
+            } else if (wParam == VK_RETURN && showChatInterface) {
+                // Submit user input to ChatGPT API
+                HttpClient::SendAsyncRequest(L"/v1/engines/davinci-codex/completions", L"YOUR_ENCRYPTED_API_KEY", userInput);
+                userInput.clear();
+            } else if (showChatInterface) {
+                // Capture user input
+                userInput += static_cast<wchar_t>(wParam);
+            }
+        }
+
+        return DefWindowProc(hWnd, uMsg, wParam, lParam);
+    }
+    virtual void OnAltK() { };
 
     int m_show_help;
 
@@ -313,25 +332,24 @@ public:
     LRESULT PluginShellVJModeWndProc(HWND hWnd, unsigned uMsg, WPARAM wParam, LPARAM lParam);
 
 protected:
-    // CONFIG PANEL FUNCTIONS:
-    BOOL    PluginShellConfigDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
-    BOOL    PluginShellConfigTab1Proc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
-    BOOL    PluginShellFontDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
-    BOOL    PluginShellDesktopOptionsDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
-    BOOL    PluginShellDualheadDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
-    bool    InitConfig(HWND hDialogWnd);
-    void    EndConfig();
-    void    UpdateAdapters(int screenmode);
-    void    UpdateFSAdapterDispModes();   // (fullscreen only)
-    void    UpdateDispModeMultiSampling(int screenmode);
-    void    UpdateMaxFps(int screenmode);
-    int     GetCurrentlySelectedAdapter(int screenmode);
-    void    SaveDisplayMode();
-    void    SaveMultiSamp(int screenmode);
-    void    SaveAdapter(int screenmode);
-    void    SaveMaxFps(int screenmode);
-    void    OnTabChanged(int nNewTab);
-	LPDIRECT3DDEVICE9 GetTextDevice() { return (m_vjd3d9_device) ? m_vjd3d9_device : m_lpDX->m_lpDevice; }
+    BOOL PluginShellConfigDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
+    BOOL PluginShellConfigTab1Proc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
+    BOOL PluginShellFontDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
+    BOOL PluginShellDesktopOptionsDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
+    BOOL PluginShellDualheadDialogProc(HWND hwnd,UINT msg,WPARAM wParam,LPARAM lParam);
+    bool InitConfig(HWND hDialogWnd);
+    void EndConfig();
+    void UpdateAdapters(int screenmode);
+    void UpdateFSAdapterDispModes();
+    void UpdateDispModeMultiSampling(int screenmode);
+    void UpdateMaxFps(int screenmode);
+    int GetCurrentlySelectedAdapter(int screenmode);
+    void SaveDisplayMode();
+    void SaveMultiSamp(int screenmode);
+    void SaveAdapter(int screenmode);
+    void SaveMaxFps(int screenmode);
+    void OnTabChanged(int nNewTab);
+    LPDIRECT3DDEVICE9 GetTextDevice() { return (m_vjd3d9_device) ? m_vjd3d9_device : m_lpDX->m_lpDevice; }
 
     // CHANGES:
     friend class CShaderParams;

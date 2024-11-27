@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Debug",
+        "type": "shell",
+        "command": "msbuild",
+        "args": [
+          "plugin.vcxproj",
+          "/p:Configuration=Debug",
+          "/p:Platform=Win32"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$msCompile"]
+      }
+    ]
+  }
+  
